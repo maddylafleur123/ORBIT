@@ -1,0 +1,210 @@
+/* Eco-Friendly Color Scheme Overrides */
+:root {
+  --eco-dark-green: #2E7D32;
+  --eco-olive: #6D8B5C;
+  --eco-bright-green: #8BC34A;
+  --eco-teal: #4DAE9A;
+  --eco-sand: #F0C987;
+  --eco-clay: #A85A4A;
+}
+
+/* Primary buttons and links */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: var(--eco-dark-green) !important;
+  border-color: var(--eco-dark-green) !important;
+}
+
+/* Link colors */
+a {
+  color: var(--eco-dark-green);
+}
+
+a:hover {
+  color: #245F28;
+}
+
+/* Navbar styling */
+.navbar-light {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0 !important;
+}
+
+.navbar-light .navbar-brand {
+  color: var(--eco-dark-green) !important;
+  font-weight: 700;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.navbar-light .nav-link {
+  color: #333 !important;
+}
+
+.navbar-light .nav-link:hover {
+  color: var(--eco-dark-green) !important;
+}
+
+/* Section backgrounds */
+.masthead {
+  background: #fff !important;
+}
+
+.masthead h1,
+.masthead h2 {
+  color: var(--eco-dark-green);
+  text-shadow: none;
+}
+
+.about-section {
+  background: linear-gradient(to bottom, var(--eco-dark-green) 0%, rgba(46, 125, 50, 0.9) 50%, rgba(109, 139, 92, 0.8) 100%);
+  color: #fff;
+}
+
+.about-section h2 {
+  color: #fff;
+}
+
+.about-section p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Projects section */
+.projects-section {
+  background-color: #f7f9f3 !important;
+}
+
+.projects-section h2,
+.projects-section h4 {
+  color: var(--eco-dark-green);
+}
+
+/* Signup section */
+.signup-section {
+  background: linear-gradient(to right, rgba(46, 125, 50, 0.9), rgba(77, 174, 154, 0.9));
+}
+
+.signup-section h2,
+.signup-section .text-white {
+  color: #fff;
+}
+
+/* Contact cards */
+.contact-section .card {
+  border-top: 4px solid var(--eco-dark-green);
+}
+
+.contact-section .text-primary {
+  color: var(--eco-dark-green) !important;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a3a1a !important;
+}
+
+/* Form controls */
+.form-control:focus,
+.form-check-input:focus {
+  border-color: var(--eco-dark-green);
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--eco-dark-green);
+  border-color: var(--eco-dark-green);
+}
+
+/* Masthead logo sizing/cropping and spacing */
+.masthead-logo {
+  max-width: 680px;
+  width: 90%;
+  margin: 80px auto 20px; /* push logo down so it clears fixed navbar */
+  overflow: hidden;
+}
+.masthead-logo .masthead-embed {
+  display: block;
+  width: 100%;
+  height: 700px; /* large display */
+  transform: translateY(-40px); /* crop top/bottom gray areas */
+}
+
+/* Reduce masthead heading sizes so everything fits */
+.masthead h1 {
+  font-size: 2.25rem !important;
+  letter-spacing: 0.4rem;
+}
+.masthead h2 {
+  font-size: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .masthead-logo { margin-top: 100px; }
+  .masthead h1 { font-size: 3rem !important; }
+  .masthead h2 { font-size: 1.125rem !important; }
+}
+
+@media (min-width: 992px) {
+  .masthead-logo { margin-top: 120px; max-width: 800px; }
+  .masthead-logo .masthead-embed { height: 780px; transform: translateY(-60px); }
+  .masthead h1 { font-size: 3.75rem !important; }
+  .masthead h2 { font-size: 1.25rem !important; }
+}
+
+/* Navbar logo text styling */
+.navbar-logo-text {
+  color: #007FFF !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+/* Navbar brand/logo: keep height modest, give logo extra horizontal span */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  padding: 0.25rem 0 !important;
+}
+
+.nav-logo {
+  display: block;
+  width: 320px;
+  max-height: 110px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Slightly larger on medium+ screens */
+@media (min-width: 768px) {
+  .navbar-brand { height: 140px; }
+  .nav-logo {
+    width: 380px;
+    max-height: 130px;
+  }
+}
+
+/* Fallback: if PDF doesn't render, collapse space and show text label */
+.navbar-brand:empty::after {
+  content: "ORBIT INSULATION";
+  color: var(--eco-dark-green);
+  font-weight: 700;
+}
+
+/* Air Sealing images - larger and stacked */
+.col-xl-8.col-lg-7 img[src*="wires"] {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Right-side green bar for Ventilation text */
+.projects-section .featured-text-right {
+  padding: 0 2rem 0 0;
+  border-left: none;
+  border-right: 0.5rem solid #2E7D32;
+}
